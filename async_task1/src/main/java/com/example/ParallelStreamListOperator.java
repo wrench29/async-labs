@@ -33,6 +33,6 @@ public class ParallelStreamListOperator implements IListOperator {
 
     @Override
     public List<Integer> filterDivisibleByThree(List<Integer> list) {
-        return list.parallelStream().filter(v -> v % 3 == 0).toList();
+        return list.parallelStream().filter(v -> v % 3 == 0 && v % 2 == 0).toList();
     }
 }
